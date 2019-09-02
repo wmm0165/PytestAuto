@@ -1,12 +1,3 @@
-"""
-------------------------------------
-@Time : 2019/4/20 10:04
-@Auth : linux超
-@File : test_sendMailCase.py
-@IDE  : PyCharm
-@Motto: Real warriors,dare to face the bleak warning,dare to face the incisive error!
-------------------------------------
-"""
 import pytest
 
 from data.send_mail_data import SendMailData

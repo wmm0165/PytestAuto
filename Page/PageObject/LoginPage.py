@@ -15,10 +15,12 @@ class LoginPage(BasePage):
     password = do_conf.get_locators_or_account('LoginPageElements', 'password')
     # 登录按钮
     loginBtn = do_conf.get_locators_or_account('LoginPageElements', 'login_btn')
+    # 登录后首页的审方，点击后可进入审方系统
+    sf = do_conf.get_locators_or_account('LoginPageElements', 'sf')
     # 登录失败的提示信息
     # error_head = do_conf.get_locators_or_account('LoginPageElements', 'errorHead')
     # 登录成功后的用户显示元素
-    # account = do_conf.get_locators_or_account('HomePageElements', 'account')
+    account = do_conf.get_locators_or_account('LoginPageElements', 'account')
 
     def login(self, username, password):
         """登录流程"""
@@ -28,6 +30,7 @@ class LoginPage(BasePage):
         self.input_username(username)
         self.input_password(password)
         self.click_login_btn()
+        self.click_sf()
 
     def open_url(self):
         return self.load_url('http://10.1.1.71:9999/syscenter/login')
@@ -54,6 +57,9 @@ class LoginPage(BasePage):
 
     def click_login_btn(self):
         return self.click(*LoginPage.loginBtn)
+
+    def click_sf(self):
+        return self.click(*LoginPage.sf)
 
     def switch_default_frame(self):
         return self.switch_to_default_frame()

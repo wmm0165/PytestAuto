@@ -1,12 +1,3 @@
-"""
-------------------------------------
-@Time : 2019/4/20 12:29
-@Auth : linux超
-@File : ContactPage.py
-@IDE  : PyCharm
-@Motto: Real warriors,dare to face the bleak warning,dare to face the incisive error!
-------------------------------------
-"""
 from Page.BasePage import BasePage
 from util.parseConFile import ParseConFile
 

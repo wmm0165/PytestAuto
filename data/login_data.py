@@ -5,7 +5,7 @@ class LoginData(object):
         (
             "admin",
             "123456",
-            "linuxxiaochao@126.com"
+            "系统管理员"
         )
     ]
 

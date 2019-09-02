@@ -1,12 +1,3 @@
-"""
-------------------------------------
-@Time : 2019/4/20 8:45
-@Auth : linux超
-@File : BasePage.py
-@IDE  : PyCharm
-@Motto: Real warriors,dare to face the bleak warning,dare to face the incisive error!
-------------------------------------
-"""
 import time
 from selenium.webdriver.support.wait import WebDriverWait as WD
 from selenium.webdriver.support import expected_conditions as ec

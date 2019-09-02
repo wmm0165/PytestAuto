@@ -1,12 +1,3 @@
-"""
-------------------------------------
-@Time : 2019/4/12 14:10
-@Auth : linux超
-@File : conftest.py
-@IDE  : PyCharm
-@Motto: Real warriors,dare to face the bleak warning,dare to face the incisive error!
-------------------------------------
-"""
 import pytest
 from selenium import webdriver
 from py._xmlgen import html
