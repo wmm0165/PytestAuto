@@ -1,11 +1,11 @@
 import pytest
 
 from Page.PageObject.LoginPage import LoginPage
-# from Page.PageObject.HomePage import HomePage
+from Page.PageObject.HomePage import HomePage
+from Page.PageObject.PlanSettingPage import PlanSettingPage
 # from Page.PageObject.ContactPage import ContactPage
 # from Page.PageObject.SendMailPage import SendMailPage
 from util.parseConFile import ParseConFile
-
 
 do_conf = ParseConFile()
 # 从配置文件中获取正确的用户名和密码
@@ -26,11 +26,12 @@ passWord = do_conf.get_locators_or_account('LoginAccount', 'password')
 @pytest.fixture(scope='class')
 def ini_pages(driver):
     login_page = LoginPage(driver)
-    # home_page = HomePage(driver)
+    home_page = HomePage(driver)
+    plansetting_page = PlanSettingPage(driver)
     # contact_page = ContactPage(driver)
     # send_mail_page = SendMailPage(driver)
     # yield driver, login_page, home_page, contact_page, send_mail_page
-    yield driver, login_page
+    yield driver, login_page, home_page, plansetting_page
 
 
 @pytest.fixture(scope='function')
@@ -45,11 +46,11 @@ def open_url(ini_pages):
 @pytest.fixture(scope='class')
 def login(ini_pages):
     # driver, login_page, home_page, contact_page, send_mail_page = ini_pages
-    driver, login_page = ini_pages
+    driver, login_page, home_page, plansetting_page = ini_pages
     # login_page.open_url()
     login_page.login(userName, passWord)
-    login_page.switch_default_frame()
-    yield login_page
+    # login_page.switch_default_frame()
+    yield login_page, home_page, plansetting_page
     # yield login_page, home_page, contact_page, send_mail_page
     driver.delete_all_cookies()
 

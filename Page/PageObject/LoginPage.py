@@ -35,11 +35,11 @@ class LoginPage(BasePage):
     def open_url(self):
         return self.load_url('http://10.1.1.71:9999/syscenter/login')
 
-    def click_password_login_btn(self):
-        return self.click(*LoginPage.password_login_btn)
-
-    def switch_login_frame(self):
-        return self.switch_to_frame(*LoginPage.frame)
+    # def click_password_login_btn(self):
+    #     return self.click(*LoginPage.password_login_btn)
+    #
+    # def switch_login_frame(self):
+    #     return self.switch_to_frame(*LoginPage.frame)
 
     def clear_username(self):
         return self.clear(*LoginPage.username)

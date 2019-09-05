@@ -5,7 +5,7 @@ class LoginData(object):
         (
             "admin",
             "123456",
-            "系统管理员"
+            "admin"
         )
     ]
 

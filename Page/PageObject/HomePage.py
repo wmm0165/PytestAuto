@@ -1,7 +1,7 @@
 from Page.BasePage import BasePage
 from util.parseConFile import ParseConFile
 
-
+import time
 class HomePage(BasePage):
     # 配置文件读取元素
     do_conf = ParseConFile()
@@ -20,6 +20,7 @@ class HomePage(BasePage):
     # def select_menu(self, menu='mailList'):
     def select_menu(self,menu):
         if menu == "plan_setting":
+            time.sleep(2)
             self.click_audit_setting()
             self.click_plan_setting()
         elif menu == 'auth_setting':
