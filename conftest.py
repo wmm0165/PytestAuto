@@ -61,8 +61,11 @@ def _capture_screenshot():
 def driver():
     global _driver
     print('------------open browser------------')
+    # 启动配置
+    option = webdriver.ChromeOptions()
+    option.add_argument('disable-infobars')
     # _driver = webdriver.Chrome("D:/soft/49chrome/Chrome/chromedriver.exe")  # 驱动chrome浏览器
-    _driver = webdriver.Chrome()  # 驱动谷歌浏览器
+    _driver = webdriver.Chrome(chrome_options=option)  # 驱动谷歌浏览器
     # _driver = webdriver.Firefox() # 驱动火狐浏览器
     _driver.maximize_window()
     yield _driver
