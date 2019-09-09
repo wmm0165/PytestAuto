@@ -24,7 +24,8 @@ class BasePage(object):
             'name': By.NAME,
             'class_name': By.CLASS_NAME,
             'xpath': By.XPATH,
-            'link_text': By.LINK_TEXT
+            'link_text': By.LINK_TEXT,
+            'css selector': By.CSS_SELECTOR
         }
         self.driver = driver
         self.outTime = timeout

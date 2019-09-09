@@ -3,9 +3,9 @@ class LoginData(object):
 
     login_success_data = [
         (
-            "admin",
+            "wangmm",
             "123456",
-            "admin"
+            "wangmm"
         )
     ]
 

@@ -33,7 +33,7 @@ class LoginPage(BasePage):
         self.click_sf()
 
     def open_url(self):
-        return self.load_url('http://10.1.1.71:9999/syscenter/login')
+        return self.load_url('http://10.1.1.89:9999/syscenter/login')
 
     # def click_password_login_btn(self):
     #     return self.click(*LoginPage.password_login_btn)
