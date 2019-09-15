@@ -207,6 +207,14 @@ class BasePage(object):
     def get_page_source(self):
         return self.get_source()
 
+    def is_true_url(self,route):
+        """判断跳转后的页面是否是预期的页面"""
+        now_url = self.driver.current_url
+        if route in now_url:
+            print("跳转后页面正确")
+        else:
+            print("跳转后页面错误")
+
 
 if __name__ == "__main__":
     pass

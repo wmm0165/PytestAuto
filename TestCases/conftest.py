@@ -4,6 +4,7 @@ from Page.PageObject.LoginPage import LoginPage
 from Page.PageObject.HomePage import HomePage
 from Page.PageObject.PlanSettingPage import PlanSettingPage
 from Page.PageObject.MissionListPage import MissionListPage
+from Page.PageObject.QualityEvaluatePage import QualityEvaluatePage
 # from Page.PageObject.ContactPage import ContactPage
 # from Page.PageObject.SendMailPage import SendMailPage
 from util.parseConFile import ParseConFile
@@ -30,10 +31,11 @@ def ini_pages(driver):
     home_page = HomePage(driver)
     plansetting_page = PlanSettingPage(driver)
     missionlist_page = MissionListPage(driver)
+    qualityevaluate_page = QualityEvaluatePage(driver)
     # contact_page = ContactPage(driver)
     # send_mail_page = SendMailPage(driver)
     # yield driver, login_page, home_page, contact_page, send_mail_page
-    yield driver, login_page, home_page, plansetting_page, missionlist_page
+    yield driver, login_page, home_page, plansetting_page, missionlist_page, qualityevaluate_page
 
 
 @pytest.fixture(scope='function')
@@ -48,11 +50,11 @@ def open_url(ini_pages):
 @pytest.fixture(scope='class')
 def login(ini_pages):
     # driver, login_page, home_page, contact_page, send_mail_page = ini_pages
-    driver, login_page, home_page, plansetting_page, missionlist_page = ini_pages
+    driver, login_page, home_page, plansetting_page, missionlist_page, qualityevaluate_page = ini_pages
     # login_page.open_url()
     login_page.login(userName, passWord)
     # login_page.switch_default_frame()
-    yield login_page, home_page, plansetting_page, missionlist_page
+    yield login_page, home_page, plansetting_page, missionlist_page, qualityevaluate_page
     # yield login_page, home_page, contact_page, send_mail_page
     driver.delete_all_cookies()
 

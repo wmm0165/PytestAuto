@@ -2,6 +2,8 @@
 # @Time : 2019/9/5 15:04
 # @Author : wangmengmeng
 import pytest
+
+
 # from data.plan_data import PlanData
 
 
@@ -15,7 +17,3 @@ class TestPlan:
         plan_setting_page = login[2]
         home_page.select_menu('plan_setting')
         plan_setting_page.add_plan(planname)
-
-
-
-
