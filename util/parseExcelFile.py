@@ -1,12 +1,3 @@
-"""
-------------------------------------
-@Time : 2019/4/22 16:12
-@Auth : linux超
-@File : parseExcelFile.py
-@IDE  : PyCharm
-@Motto: Real warriors,dare to face the bleak warning,dare to face the incisive error!
-------------------------------------
-"""
 from openpyxl import load_workbook
 from config.conf import DATA_Path
 

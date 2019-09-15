@@ -1,13 +1,3 @@
-"""
-------------------------------------
-@Time : 2019/4/15 12:05
-@Auth : linux超
-@File : keyboard.py
-@IDE  : PyCharm
-@Motto: Real warriors,dare to face the bleak warning,dare to face the incisive error!
-------------------------------------
-"""
-
 # 模拟按键
 import win32api
 import win32con

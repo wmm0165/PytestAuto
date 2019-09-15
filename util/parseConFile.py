@@ -1,14 +1,6 @@
-"""
-------------------------------------
-@Time : 2019/4/18 10:54
-@Auth : linux超
-@File : parseConFile.py
-@IDE  : PyCharm
-@Motto: Real warriors,dare to face the bleak warning,dare to face the incisive error!
-------------------------------------
-"""
 import configparser
 from config.conf import CONF_PATH
+from configparser import NoOptionError,NoSectionError
 
 
 class ParseConFile(object):
@@ -33,7 +25,7 @@ class ParseConFile(object):
             if ('->' in locator):
                 locator = tuple(locator.split('->'))
             return locator
-        except configparser.NoOptionError as e:
+        except (NoSectionError,NoOptionError) as e:
             print('error:', e)
         return 'error: No option "{}" in section: "{}"'.format(option, section)
 
